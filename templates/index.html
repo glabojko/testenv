@@ -11,15 +11,21 @@
        <div>
         <form action="/child" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="id" value={{id}}>
+            <input type="hidden" name="name" value={{name}}>
+            <input type="hidden" name="pesel" value={{pesel}}>
+            <p>
+                <label>ID: </label>
+                <textarea id="id" name="id" rows="1" cols="10"></textarea>
+            </p>
         <p>
             <label>Child name: </label>
             <textarea id="name" name="name" rows="1" cols="50"></textarea>
         </p>
         <p>
             <label>Pesel number: </label>
-            <textarea id="pesel" name="pesel" rows="1" cols="50"></textarea>
+            <textarea id="pesel" name="pesel" rows="1" cols="11"></textarea>
         </p>
-        <button class="add-your-answer" type="submit">Add your child to database</button>
+        <button type="submit">Add your child to database</button>
         </form>
     </div>
        
