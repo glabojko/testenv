@@ -11,11 +11,11 @@ def index():
 
 @app.route("/child", methods=["POST", "GET"])
 def child():
-    if request.method == 'POST':
-        id = request.form.get('id')
-        name = request.form.get('name')
-        pesel = request.form.get('pesel')
-    data_manager.add_child_to_database(id, name, pesel)
+
+    id = request.form.get('id')
+    name = request.form.get('name')
+    pesel = request.form.get('pesel')
+    data_manager.add_child_to_database(int(id), str(name), int(pesel))
     return render_template('child.html', id=id, name=name, pesel=pesel)
 
 if __name__ == '__main__':

@@ -2,7 +2,7 @@ import database
 
 
 @database.connection_handler
-def add_child_to_database(cursor, id:str, name:str, pesel:str):
+def add_child_to_database(cursor, id:int, name:str, pesel:int):
     query = """
           INSERT INTO children (id, name, pesel) 
           VALUES (%(id)s, %(name)s, %(pesel)s); """
